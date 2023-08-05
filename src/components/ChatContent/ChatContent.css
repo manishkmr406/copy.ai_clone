@@ -4,7 +4,8 @@
     justify-content: space-between;
     text-align: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    /* overflow: hidden; */
 }
 .upper{
     display: flex;
@@ -13,10 +14,6 @@
     align-items: center;
     background-color: #ffffff;
     border-bottom: 1px solid rgba(228,237,241,1);
-    position: sticky;
-    top: 0;
-    right: 0;
-    /* left: 16rem; */
 }
 .upper h1{
     font-size: 20px;
@@ -37,15 +34,16 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 .chat-text{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 80%;
     overflow: scroll;
     padding: 0;
 }
@@ -68,6 +66,7 @@
 .bottom-section{
     width: 600px;
     margin-bottom: 20px;
+    /* overflow: hidden; */
 }
 .input-container{
     position: relative;
