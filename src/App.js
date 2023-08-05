@@ -7,13 +7,20 @@ import Content from './components/Content/Content';
 import Navbar from './components/Navbar/Navbar'; 
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 function App() {
-  const [show,setShow]=useState(false);
+ 
   return (
     <BrowserRouter>
-     {!show && <Navbar />}
      <Routes>
-      <Route path='/' element={<Content />} />
-      <Route path='/chat' element={<Chat setShow={setShow}/>} />
+      <Route path='/' element={<>
+        <Navbar />
+        <Content />
+      </>} />
+      <Route path='/chat' element={
+      <>
+        <Navbar />
+        <Chat />
+      </>
+      } />
       <Route path='/project' element={<Chatbox />} />
      </Routes>
      </BrowserRouter>

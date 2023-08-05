@@ -2,12 +2,12 @@ import React from 'react'
 import "./Chat.css";
 import { useNavigate } from 'react-router-dom';
 
-const Chat = ({setShow}) => {
+const Chat = () => {
   const navigate=useNavigate();
 
-  const handleShow=()=>{
-    setShow(true);
-  }
+  // const handleShow=()=>{
+  //   setShow(true);
+  // }
   return (
     <div className="chat_hero-wrapper">
   <div className="container-hero">
@@ -25,7 +25,7 @@ const Chat = ({setShow}) => {
           </strong></span>
         </p>
         <div className="try_chat-btn-box" onClick={()=> navigate("/project")}>
-            <div className="try_chat-btn" onClick={handleShow}>
+            <div className="try_chat-btn">
               Try Chat by Copy.ai Free
             </div>
             <img src="https://assets-global.website-files.com/628288c5cd3e8411b90a36a4/629d56e89252a851df58dc0f_arrow_right_alt_FILL1_wght300_GRAD200_opsz24_w.svg" loading="lazy" alt="" className="button-icon icon-right"/>

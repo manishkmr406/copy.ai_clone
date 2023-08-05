@@ -1,12 +1,12 @@
 const PORT=8000
 const express=require('express')
 const cors=require('cors')
-const { AppBar } = require('@mui/material')
+require('dotenv').config()
 const app=express()
 app.use(express.json())
 app.use(cors())
 
-const API_KEY='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'
+const API_KEY=process.env.API_KEY;
 
 app.post('/completions',async (req,res)=>{
     const options= {

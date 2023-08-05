@@ -1,9 +1,9 @@
 .sidebar{
     width: 16rem;
-    position: fixed;
+    /* position: fixed; */
     height: 100vh;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     border-right: 1px solid rgba(228,237,241,1);
     padding-top: 1rem;
     padding-left: 2rem;
@@ -24,6 +24,7 @@
   }
   .logo_sidebar img{
     width: 100%;
+    cursor: pointer;
   }
   .sidebarOption {
     display: flex;
@@ -31,6 +32,9 @@
     padding: 10px;
     cursor: pointer;
   }
+  /* .sidebarOption:focus{
+    background-color: rgb(0,163,136);
+  } */
   
   .sidebarOption:hover {
     background: rgba(236,254,249,1);
