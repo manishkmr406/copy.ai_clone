@@ -1,11 +1,20 @@
 import React, { useEffect } from 'react'
 import "./ChatContent.css"
 import { useState } from 'react'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../firebase'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../../redux/userSlice'
+
+
 const ChatContent = () => {
   const [inputValue,setInputValue]=useState("")
   const [message,setMessage]= useState("")
   const [prevChats,setPrevChats]= useState([])
   const [currentTitle,setCurrentTitle]= useState(null)
+  const navigate=useNavigate();
+  const user=useSelector(selectUser);
 
   const getMessages=async ()=>{
     const options={
@@ -52,7 +61,13 @@ const ChatContent = () => {
     setInputValue("")
     setCurrentTitle(null)
   }
-
+ 
+  useEffect(()=>{
+   if(!user){
+    navigate('/')
+   }
+  },[user])
+  console.log(auth)
   console.log(prevChats)
 
   const currentChat= prevChats.filter(prev => prev.title === currentTitle)
@@ -63,6 +78,7 @@ const ChatContent = () => {
     <div className='upper'>
      <h1>Hello Guide</h1>
      <button onClick={createNewChat}>New Project</button>
+     <button onClick={()=> signOut(auth)}>Log out</button>
     </div>
     <div className='chat-info-container'>
       <div className='chat-text'>
