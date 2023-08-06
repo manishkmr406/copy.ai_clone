@@ -36,7 +36,7 @@ const Content = () => {
         <div className='or-text'>or</div>
         <div className='email-box'>
         <div className='btn-text'>
-        Sign up with email
+          Sign up with email
         </div>
         <img src='https://assets-global.website-files.com/628288c5cd3e8411b90a36a4/629d56e89252a851df58dc0f_arrow_right_alt_FILL1_wght300_GRAD200_opsz24_w.svg' alt=''/>
         </div>
