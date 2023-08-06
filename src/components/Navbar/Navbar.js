@@ -17,7 +17,7 @@ const Navbar = () => {
         <div className='hiring_text'>We're Hiring!</div>
       </div>
       <div className='navbar_menu'>
-        <div className='menu_hover' onClick={()=> user ? navigate("/chat") : alert("Please login!")}>Chat</div>
+        <div className='menu_hover' onClick={()=> navigate('/chat')}>Chat</div>
         <div className='menu_hover'>Use Cases</div>
         <div className='menu_hover'>Resources</div>
         <div className='menu_hover'>Pricing</div>
