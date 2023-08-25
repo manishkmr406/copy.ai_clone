@@ -27,7 +27,7 @@ const ChatContent = () => {
       }
     }
     try {
-      const response=await fetch('http://localhost:8000/completions', options)
+      const response=await fetch('https://copy-ai-clone.vercel.app/completions', options)
       const data=await response.json()
       setMessage(data.choices[0].message)
     } catch (error) {
@@ -73,7 +73,7 @@ const ChatContent = () => {
   const currentChat= prevChats.filter(prev => prev.title === currentTitle)
   const uniqueTitles=Array.from(new Set(prevChats.map(prev => prev.title)))
   console.log(uniqueTitles)
-  
+
   return (
     <div className='side-container'>
     <div className='upper'>
