@@ -73,6 +73,7 @@ const ChatContent = () => {
   const currentChat= prevChats.filter(prev => prev.title === currentTitle)
   const uniqueTitles=Array.from(new Set(prevChats.map(prev => prev.title)))
   console.log(uniqueTitles)
+  
   return (
     <div className='side-container'>
     <div className='upper'>
